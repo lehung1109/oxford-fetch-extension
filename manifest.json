@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Oxford fetch",
+  "description": "Oxford get html by fetch api",
+  "version": "1.0",
+  "action": {
+    "default_popup": "oxford.html",
+    "default_icon": "oxford.png"
+  },
+  "icons": {
+    "16": "images/oxford.png",
+    "32": "images/oxford.png",
+    "48": "images/oxford.png",
+    "128": "images/oxford.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["tabs"]
+}
